@@ -1,8 +1,8 @@
 export type Film = {
   id: number
-  name: string
+  title: string
   description: string
-  postDate: string
+  postDate: Date
   genre: string
   released: number
   previewVideoLink: string
