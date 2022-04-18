@@ -69,7 +69,7 @@ npm start
 #### Поднять mock сервер
 
 ```bash
-npm mock:server
+npm run mock:server
 ```
 
 Поднимает сервер содержащий моковые данные

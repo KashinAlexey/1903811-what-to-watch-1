@@ -30,8 +30,7 @@ export default class TSVFileReader implements FileReaderInterface {
         rating: Number.parseInt(rating, 10),
         scoresCount: Number.parseInt(scoresCount, 10),
         director,
-        starring: starring.split(';')
-          .map((name) => (name)),
+        starring: starring.split(';'),
         runTime: Number.parseInt(runTime, 10),
         genre,
         released: Number.parseInt(released, 10),
