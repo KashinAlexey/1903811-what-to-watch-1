@@ -1,0 +1,203 @@
+{
+  "api": {
+    "films": [
+      {
+        "name": "War of the Worlds",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/War_of_the_Worlds.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/war-of-the-worlds.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/War_of_the_Worlds.jpg",
+        "backgroundColor": "#9B7E61",
+        "description": "As Earth is invaded by alien tripod fighting machines, one family fights for survival.",
+        "rating": 9.3,
+        "scoresCount": 386834,
+        "director": "Steven Spielberg",
+        "starring": [
+          "Tom Cruise",
+          "Dakota Fanning",
+          "Tim Robbins"
+        ],
+        "runTime": 116,
+        "genre": "Adventure",
+        "released": 2005,
+        "id": 1,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/matrix.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/dog.mp4"
+      },
+      {
+        "name": "Seven Years in Tibet",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/Seven_Years_in_Tibet.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/seven-years-in-tibet.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/Seven_Years_in_Tibet.jpg",
+        "backgroundColor": "#C6CADF",
+        "description": "True story of Heinrich Harrer, an Austrian mountain climber who became friends with the Dalai Lama at the time of China's takeover of Tibet.",
+        "rating": 3.6,
+        "scoresCount": 112612,
+        "director": "Jean-Jacques Annaud",
+        "starring": [
+          "Brad Pitt",
+          "David Thewlis",
+          "BD Wong"
+        ],
+        "runTime": 136,
+        "genre": "Adventure",
+        "released": 1997,
+        "id": 2,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/bubbles.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/dog.mp4"
+      },
+      {
+        "name": "We need to talk about Kevin",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/We_need_to_talk_about_Kevin.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/we-need-to-talk-about-kevin.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/We_need_to_talk_about_Kevin.jpg",
+        "backgroundColor": "#E1DFDE",
+        "description": "Kevin's mother struggles to love her strange child, despite the increasingly dangerous things he says and does as he grows up. But Kevin is just getting started, and his final act will be beyond anything anyone imagined.",
+        "rating": 3.8,
+        "scoresCount": 123240,
+        "director": "Lynne Ramsay",
+        "starring": [
+          "Tilda Swinton",
+          "John C. Reilly",
+          "Ezra Miller"
+        ],
+        "runTime": 112,
+        "genre": "Drama",
+        "released": 2011,
+        "id": 3,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/bubbles.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/dog.mp4"
+      },
+      {
+        "name": "Legend",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/Legend.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/legend.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/legend.jpg",
+        "backgroundColor": "#E1DAD7",
+        "description": "Identical twin gangsters Ronald and Reginald Kray terrorize London during the 1960s.",
+        "rating": 3.5,
+        "scoresCount": 138487,
+        "director": "Brian Helgeland",
+        "starring": [
+          "Tom Hardy",
+          "Emily Browning",
+          "Taron Egerton"
+        ],
+        "runTime": 132,
+        "genre": "Crime",
+        "released": 2015,
+        "id": 4,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/bubbles.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/dog.mp4"
+      },
+      {
+        "name": "Bohemian Rhapsody",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/Bohemian_Rhapsody.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/bohemian_rhapsody.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/Bohemian_Rhapsody.jpg",
+        "backgroundColor": "#929FA5",
+        "description": "Bohemian Rhapsody is a foot-stomping celebration of Queen, their music and their extraordinary lead singer Freddie Mercury. Freddie defied stereotypes and shattered convention to become one of the most beloved entertainers on the planet. The film traces the meteoric rise of the band through their iconic songs and revolutionary sound. They reach unparalleled success, but in an unexpected turn Freddie, surrounded by darker influences, shuns Queen in pursuit of his solo career. Having suffered greatly without the collaboration of Queen, Freddie manages to reunite with his bandmates just in time for Live Aid. While bravely facing a recent AIDS diagnosis, Freddie leads the band in one of the greatest performances in the history of rock music. Queen cements a legacy that continues to inspire outsiders, dreamers and music lovers to this day.",
+        "rating": 6.1,
+        "scoresCount": 338903,
+        "director": "Bryan Singer",
+        "starring": [
+          "Rami Malek",
+          "Lucy Boynton",
+          "Gwilym Lee"
+        ],
+        "runTime": 134,
+        "genre": "Drama",
+        "released": 2018,
+        "id": 5,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/bike.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/traffic.mp4"
+      },
+      {
+        "name": "Pulp Fiction",
+        "posterImage": "https://9.react.pages.academy/static/film/poster/Pulp_Fiction.jpg",
+        "previewImage": "https://9.react.pages.academy/static/film/preview/pulp-fiction.jpg",
+        "backgroundImage": "https://9.react.pages.academy/static/film/background/Pulp_Fiction.jpg",
+        "backgroundColor": "#795433",
+        "description": "The lives of two mob hitmen, a boxer, a gangster & his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        "rating": 1.5,
+        "scoresCount": 1635992,
+        "director": "Quentin Tarantino",
+        "starring": [
+          "John Travolta",
+          "Uma Thurman",
+          "Samuel L. Jackson"
+        ],
+        "runTime": 153,
+        "genre": "Crime",
+        "released": 1994,
+        "id": 6,
+        "isFavorite": false,
+        "videoLink": "https://9.react.pages.academy/static/film/video/bubbles.mp4",
+        "previewVideoLink": "https://9.react.pages.academy/static/film/video/dog.mp4"
+      }
+    ],
+    "users": [
+      {
+        "avatarUrl": "img/1.png",
+        "email": "Oliver.conner@gmail.com",
+        "id": 1,
+        "name": "Oliver.conner",
+        "token": "T2xpdmVyLmNvbm5lckBnbWFpbC5jb20="
+      },
+      {
+        "avatarUrl": "img/2.png",
+        "email": "Jack.conner@gmail.com",
+        "id": 1,
+        "name": "Jack.conner",
+        "token": "T2xpdmVyLmNvbm5lckBnbWFpbC5jb20="
+      },
+      {
+        "avatarUrl": "img/3.png",
+        "email": "Stive.conner@gmail.com",
+        "id": 1,
+        "name": "Stive.conner",
+        "token": "T2xpdmVyLmNvbm5lckBnbWFpbC5jb20="
+      },
+      {
+        "avatarUrl": "img/4.png",
+        "email": "Mike.conner@gmail.com",
+        "id": 1,
+        "name": "Mike.conner",
+        "token": "T2xpdmVyLmNvbm5lckBnbWFpbC5jb20="
+      },
+      {
+        "avatarUrl": "img/5.png",
+        "email": "Jane.conner@gmail.com",
+        "id": 1,
+        "name": "Jane.conner",
+        "token": "T2xpdmVyLmNvbm5lckBnbWFpbC5jb20="
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "user": {
+          "id": 13,
+          "name": "Zak"
+        },
+        "rating": 9.6,
+        "comment": "This movie is just plain bad. There must be some big payola going round this awards season. Badly written, average acting at best, all the characters are unrelatable and inlikeable. 2 hours of my life wasted.",
+        "date": "2022-02-02T21:48:13.678Z"
+      },
+      {
+        "id": 2,
+        "user": {
+          "id": 15,
+          "name": "Kendall"
+        },
+        "rating": 1.6,
+        "comment": "Unfortunately we don't have a reliable way to tell the true ratings of a movie.",
+        "date": "2022-02-28T21:48:13.678Z"
+      }
+    ]
+  }
+}
