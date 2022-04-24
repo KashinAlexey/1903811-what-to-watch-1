@@ -24,3 +24,6 @@ export const createFilm = (row: string) => {
     isFavorite: isFavorite === 'true',
   } as Film;
 };
+
+export const getErrorMessage = (error: unknown): string =>
+  error instanceof Error ? error.message : '';
