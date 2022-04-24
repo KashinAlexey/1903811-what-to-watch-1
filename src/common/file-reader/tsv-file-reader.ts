@@ -34,7 +34,7 @@ export default class TSVFileReader implements FileReaderInterface {
         runTime: Number.parseInt(runTime, 10),
         genre,
         released: Number.parseInt(released, 10),
-        id: Number.parseInt(id, 10),
+        id,
         videoLink,
         previewVideoLink,
         postDate: new Date(createdDate),
