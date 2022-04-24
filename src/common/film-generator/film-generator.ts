@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import { nanoid } from 'nanoid';
 import { MockData } from '../../types/mock-data.type.js';
 import { generateRandomValue, getRandomItem, getRandomItems } from '../../utils/random.js';
 import { FilmGeneratorInterface } from './film-generator.interface.js';
@@ -26,11 +27,13 @@ export default class FilmGenerator implements FilmGeneratorInterface {
     const videoLink = getRandomItem<string>(this.mockData.videoLinks);
     const previewVideoLink = getRandomItem<string>(this.mockData.previewVideoLinks);
     const postDate = dayjs().subtract(generateRandomValue(FIRST_WEEK_DAY, LAST_WEEK_DAY), 'day').toISOString();
+    const id = nanoid();
 
     return [
       name, posterImage, previewImage, backgroundImage, backgroundColor, description, rating,
       scoresCount, director, starrings,
-      runTime, genre, released, videoLink, previewVideoLink,
+      runTime, genre, released, id,
+      videoLink, previewVideoLink,
       postDate, isFavorite,
     ].join('\t');
   }
