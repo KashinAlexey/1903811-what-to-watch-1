@@ -1,4 +1,5 @@
 import { createWriteStream, WriteStream} from 'fs';
+import { WRITE_STREAM_CHUNK } from '../../const.js';
 import { FileWriterInterface } from './file-writer.interface.js';
 
 export default class TSVFileWriter implements FileWriterInterface {
@@ -8,7 +9,7 @@ export default class TSVFileWriter implements FileWriterInterface {
     this.stream = createWriteStream(this.filename, {
       flags: 'w',
       encoding: 'utf8',
-      highWaterMark: 2 ** 16, // 64KB
+      highWaterMark: WRITE_STREAM_CHUNK,
       autoClose: true,
     });
   }
