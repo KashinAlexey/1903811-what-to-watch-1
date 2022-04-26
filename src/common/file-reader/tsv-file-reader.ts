@@ -1,45 +1,35 @@
-import { readFileSync } from 'fs';
-import { Films } from '../../types/film.type.js';
+import EventEmitter from 'events';
 import { FileReaderInterface } from './file-reader.interface.js';
+import { createReadStream } from 'fs';
+import { READ_STREAM_CHUNK } from '../../const.js';
 
-export default class TSVFileReader implements FileReaderInterface {
-  private rawData = '';
-
-  constructor(public filename: string) { }
-
-  public read(): void {
-    this.rawData = readFileSync(this.filename, { encoding: 'utf8' });
+export default class TSVFileReader extends EventEmitter implements FileReaderInterface {
+  constructor(public filename: string) {
+    super();
   }
 
-  public toArray(): Films {
-    if (!this.rawData) {
-      return [];
+  public async read():Promise<void> {
+    const stream = createReadStream(this.filename, {
+      highWaterMark: READ_STREAM_CHUNK,
+      encoding: 'utf-8',
+    });
+
+    let lineRead = '';
+    let endLinePosition = -1;
+    let importedRowCount = 0;
+
+    for await (const chunk of stream) {
+      lineRead += chunk.toString();
+
+      while ((endLinePosition = lineRead.indexOf('\n')) >= 0) {
+        const completeRow = lineRead.slice(0, endLinePosition + 1);
+        lineRead = lineRead.slice(++endLinePosition);
+        importedRowCount++;
+
+        this.emit('line', completeRow);
+      }
     }
 
-    return this.rawData
-      .split('\n')
-      .filter((row) => row.trim() !== '')
-      .map((line) => line.split('\t'))
-      .map(([title, posterImage, previewImage, backgroundImage, backgroundColor, description, rating,  scoresCount, director, starring, runTime, genre, released, id, videoLink, previewVideoLink, createdDate, isFavorite]) => ({
-        title,
-        posterImage,
-        previewImage,
-        backgroundImage,
-        backgroundColor,
-        description,
-        rating: Number.parseInt(rating, 10),
-        scoresCount: Number.parseInt(scoresCount, 10),
-        director,
-        starring: starring.split(';'),
-        runTime: Number.parseInt(runTime, 10),
-        genre,
-        released: Number.parseInt(released, 10),
-        id: Number.parseInt(id, 10),
-        videoLink,
-        previewVideoLink,
-        postDate: new Date(createdDate),
-        isFavorite: isFavorite === 'true',
-      })
-      );
+    this.emit('end', importedRowCount);
   }
 }

@@ -1,0 +1,22 @@
+export type MockData = {
+  names: string[];
+  genres: string[];
+  descriptions: string[];
+  posterImages: string[];
+  previewImages: string[];
+  backgroundImages: string[];
+  backgroundColores: string[];
+  ratings: string[];
+  scoresCounts: string[];
+  directors: string[];
+  starrings: string[];
+  runTimes: string[];
+  released: string[];
+  isFavorites: string[];
+  videoLinks: string[];
+  previewVideoLinks: string[];
+  users: string[];
+  emails: string[];
+  avatars: string[];
+  comments: string[];
+};

@@ -1,5 +1,5 @@
 export type Film = {
-  id: number
+  id: string
   title: string
   description: string
   postDate: Date
