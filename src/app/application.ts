@@ -5,14 +5,15 @@ import {ConfigInterface} from '../common/config/config.interface.js';
 import {Component} from '../types/component.types.js';
 import {getURI} from '../utils/db.js';
 import {DatabaseInterface} from '../common/database-client/database.interface.js';
-import { UserModel } from '../modules/user/user.entity.js';
+import { UserServiceInterface } from '../modules/user/user-service.interface.js';
 
 @injectable()
 export default class Application {
   constructor(
     @inject(Component.LoggerInterface) private logger: LoggerInterface,
     @inject(Component.ConfigInterface) private config: ConfigInterface,
-    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface
+    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface,
+    @inject(Component.UserServiceInterface) private userService: UserServiceInterface
   ) {}
 
   public async init() {
@@ -30,11 +31,12 @@ export default class Application {
 
     await this.databaseClient.connect(uri);
 
-    const user = UserModel.create({
+    const user = this.userService.create({
       email: 'test@email.ru',
       avatarUrl: 'keks.jpg',
       name: '2',
-    });
+      password: '1234567'
+    }, this.config.get('SALT'));
 
     console.log(user);
   }
