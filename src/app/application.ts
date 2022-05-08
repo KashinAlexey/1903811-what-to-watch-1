@@ -34,7 +34,6 @@ export default class Application {
       email: 'test@email.ru',
       avatarUrl: 'keks.jpg',
       name: '2',
-      token: 'Unknown'
     });
 
     console.log(user);
