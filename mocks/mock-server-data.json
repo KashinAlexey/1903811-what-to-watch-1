@@ -28,13 +28,6 @@
       "https://9.react.pages.academy/static/film/poster/Legend.jpg",
       "https://9.react.pages.academy/static/film/poster/Bohemian_Rhapsody.jpg"
     ],
-    "previewImages": [
-      "https://9.react.pages.academy/static/film/preview/war-of-the-worlds.jpg",
-      "https://9.react.pages.academy/static/film/preview/seven-years-in-tibet.jpg",
-      "https://9.react.pages.academy/static/film/preview/we-need-to-talk-about-kevin.jpg",
-      "https://9.react.pages.academy/static/film/preview/legend.jpg",
-      "https://9.react.pages.academy/static/film/preview/bohemian_rhapsody.jpg"
-    ],
     "backgroundImages": [
       "https://9.react.pages.academy/static/film/background/War_of_the_Worlds.jpg",
       "https://9.react.pages.academy/static/film/background/Seven_Years_in_Tibet.jpg",
@@ -55,13 +48,6 @@
       "8.5",
       "5.3",
       "2.1"
-    ],
-    "scoresCounts": [
-      "386834",
-      "254784",
-      "126438",
-      "976345",
-      "154098"
     ],
     "directors": [
       "Steven Spielberg",
@@ -92,10 +78,6 @@
       "2007",
       "2008",
       "2009"
-    ],
-    "isFavorites": [
-      "true",
-      "false"
     ],
     "videoLinks": [
       "https://9.react.pages.academy/static/film/video/matrix.mp4",

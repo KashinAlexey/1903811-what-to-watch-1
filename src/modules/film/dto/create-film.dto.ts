@@ -1,8 +1,10 @@
-export default class Film {
+import { GenreType } from '../../../types/genre-type.enum.js';
+
+export default class CreateFilmDto {
   public title!: string;
   public description!: string;
   public postDate!: Date;
-  public genre!: string;
+  public genre!: GenreType;
   public released!: number;
   public rating!: number;
   public previewVideoLink!: string;
@@ -12,10 +14,7 @@ export default class Film {
   public runTime!: number;
   public userId!: string;
   public commentsCount!: number;
-  public previewImage!: string;
   public posterImage!: string;
   public backgroundImage!: string;
   public backgroundColor!: string;
-  public scoresCount!: number;
-  public isFavorite!: boolean;
 }

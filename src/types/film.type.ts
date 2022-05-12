@@ -1,22 +1,21 @@
+import { GenreType } from './genre-type.enum.js';
+
 export type Film = {
-  id: string
   title: string
   description: string
   postDate: Date
-  genre: string
+  genre: GenreType
   released: number
   previewVideoLink: string
   videoLink: string
   starring: string[]
   director: string
   runTime: number
-  previewImage: string
   posterImage: string
   backgroundImage: string
   backgroundColor: string
   rating: number
-  scoresCount: number
-  isFavorite: boolean
+  commentsCount: number
 }
 
 export type Films = Film[];
