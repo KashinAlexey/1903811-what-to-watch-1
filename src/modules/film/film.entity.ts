@@ -109,8 +109,6 @@ export class FilmEntity extends TimeStamps implements Film {
 
   @prop({required: true})
   public backgroundColor!: string;
-
-
 }
 
-export const OfferModel = getModelForClass(FilmEntity);
+export const FilmModel = getModelForClass(FilmEntity);

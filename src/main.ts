@@ -11,6 +11,9 @@ import {UserServiceInterface} from './modules/user/user-service.interface.js';
 import {UserEntity, UserModel} from './modules/user/user.entity.js';
 import { ModelType } from '@typegoose/typegoose/lib/types.js';
 import Application from './app/application.js';
+import { FilmServiceInterface } from './modules/film/film-service.interface.js';
+import FilmService from './modules/film/film.service.js';
+import { FilmEntity, FilmModel } from './modules/film/film.entity.js';
 
 const applicationContainer = new Container();
 applicationContainer.bind<Application>(Component.Application).to(Application).inSingletonScope();
@@ -19,6 +22,8 @@ applicationContainer.bind<ConfigInterface>(Component.ConfigInterface).to(ConfigS
 applicationContainer.bind<DatabaseInterface>(Component.DatabaseInterface).to(DatabaseService).inSingletonScope();
 applicationContainer.bind<UserServiceInterface>(Component.UserServiceInterface).to(UserService);
 applicationContainer.bind<ModelType<UserEntity>>(Component.UserModel).toConstantValue(UserModel);
+applicationContainer.bind<FilmServiceInterface>(Component.FilmServiceInterface).to(FilmService);
+applicationContainer.bind<ModelType<FilmEntity>>(Component.FilmModel).toConstantValue(FilmModel);
 
 const application = applicationContainer.get<Application>(Component.Application);
 await application.init();
