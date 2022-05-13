@@ -3,7 +3,7 @@ import crypto from 'crypto';
 
 export const createFilm = (row: string) => {
   const tokens = row.replace('\n', '').split('\t');
-  const [title, posterImage, backgroundImage, backgroundColor, description, rating, director, starring, runTime, genre, released, videoLink, previewVideoLink, createdDate, commentsCount, name, email, avatarUrl] = tokens;
+  const [title, posterImage, backgroundImage, backgroundColor, description, rating, director, starring, runTime, genre, released, name, email, avatarUrl, videoLink, previewVideoLink, createdDate, commentsCount] = tokens;
   return {
     title,
     posterImage,
