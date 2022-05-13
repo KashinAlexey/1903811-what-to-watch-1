@@ -13,7 +13,7 @@ export interface CommentEntity extends Base {}
   }
 })
 
-export class CommentEntity extends TimeStamps implements Comment {
+export class CommentEntity extends TimeStamps {
   constructor(data: Comment) {
     super();
 

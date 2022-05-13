@@ -14,7 +14,7 @@ export interface FilmEntity extends Base {}
   }
 })
 
-export class FilmEntity extends TimeStamps implements Film {
+export class FilmEntity extends TimeStamps {
   constructor(data: Film) {
     super();
 
