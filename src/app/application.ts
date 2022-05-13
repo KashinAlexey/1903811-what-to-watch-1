@@ -5,17 +5,13 @@ import {ConfigInterface} from '../common/config/config.interface.js';
 import {Component} from '../types/component.types.js';
 import {getURI} from '../utils/db.js';
 import {DatabaseInterface} from '../common/database-client/database.interface.js';
-import { UserServiceInterface } from '../modules/user/user-service.interface.js';
-import { CommentServiceInterface } from '../modules/comment/comment-service.interface.js';
 
 @injectable()
 export default class Application {
   constructor(
     @inject(Component.LoggerInterface) private logger: LoggerInterface,
     @inject(Component.ConfigInterface) private config: ConfigInterface,
-    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface,
-    @inject(Component.UserServiceInterface) private userService: UserServiceInterface,
-    @inject(Component.CommentServiceInterface) private commentService: CommentServiceInterface
+    @inject(Component.DatabaseInterface) private databaseClient: DatabaseInterface
   ) {}
 
   public async init() {
@@ -32,23 +28,5 @@ export default class Application {
     );
 
     await this.databaseClient.connect(uri);
-
-    const user = this.userService.create({
-      email: 'test@email.ru',
-      avatarUrl: 'keks.jpg',
-      name: '2',
-      password: '1234567'
-    }, this.config.get('SALT'));
-
-    console.log(user);
-
-    // TODO Не записывает в БД. Ошибка
-    const comment = this.commentService.create({
-      comment: 'Comment',
-      date: '2 minutes ago',
-      rating: 5.3,
-    });
-
-    console.log(comment);
   }
 }

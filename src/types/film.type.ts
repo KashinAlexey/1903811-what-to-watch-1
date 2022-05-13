@@ -1,4 +1,5 @@
 import { GenreType } from './genre-type.enum.js';
+import { User } from './user.type.js';
 
 export type Film = {
   title: string
@@ -16,6 +17,7 @@ export type Film = {
   backgroundColor: string
   rating: number
   commentsCount: number
+  user: User
 }
 
 export type Films = Film[];
